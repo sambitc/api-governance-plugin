@@ -1,0 +1,8 @@
+# Deliberately incomplete test input.
+apiVersion: gateway.gravitee.io/v1alpha1
+kind: ApiResource
+metadata:
+  name: customer-api
+spec:
+  name: Customer API
+  version: "1.0.0"

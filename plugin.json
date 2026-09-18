@@ -1,0 +1,18 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "api-governance",
+  "description": "Reusable Copilot plugin for reviewing Gravitee API definitions against API governance rules.",
+  "version": "1.0.0",
+  "author": {
+    "name": "API Governance Team"
+  },
+  "license": "MIT",
+  "keywords": [
+    "api",
+    "governance",
+    "gravitee",
+    "openapi",
+    "kubernetes",
+    "security"
+  ]
+}

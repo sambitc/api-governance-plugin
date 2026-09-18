@@ -1,0 +1,19 @@
+# ILLUSTRATIVE STARTER SCHEMA/REFERENCE ONLY.
+# Replace this with the exact Gravitee CRD/schema version approved by your organization.
+
+apiVersion: gateway.gravitee.io/v1alpha1
+kind: ApiResource
+metadata:
+  name: example-api
+spec:
+  name: Example API
+  version: "1.0.0"
+  description: Example API description
+  owner: example-team
+  authentication:
+    type: oauth2
+  policies:
+    - name: rate-limit
+      configuration:
+        limit: 100
+        period: 60

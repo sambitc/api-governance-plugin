@@ -1,0 +1,12 @@
+# ILLUSTRATIVE EXAMPLE ONLY.
+apiVersion: gateway.gravitee.io/v1alpha1
+kind: ApiResource
+metadata:
+  name: customer-profile-api
+spec:
+  name: Customer Profile API
+  version: "1.0.0"
+  description: Provides customer profile operations.
+  owner: customer-team
+  authentication:
+    type: oauth2

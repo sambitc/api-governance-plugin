@@ -1,0 +1,41 @@
+name: API Governance
+
+on:
+  pull_request:
+    paths:
+      - "**/*.yaml"
+      - "**/*.yml"
+      - "**/*.json"
+
+jobs:
+  governance:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate API YAML
+        shell: bash
+        run: |
+          set -euo pipefail
+          found=0
+          while IFS= read -r -d '' file; do
+            found=1
+            echo "Checking $file"
+            bash skills/gravitee-api/scripts/validate.sh "$file"
+          done < <(find . -type f \\( -name '*.yaml' -o -name '*.yml' \\) -print0)
+
+          if [[ "$found" -eq 0 ]]; then
+            echo "No YAML files found."
+          fi
+
+      # Add your real deterministic checks here.
+      #
+      # Example:
+      # - name: Spectral
+      #   run: npx @stoplight/spectral-cli lint api/openapi.yaml
+      #
+      # Example:
+      # - name: Kubeconform
+      #   run: kubeconform ...

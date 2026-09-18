@@ -1,0 +1,15 @@
+# ILLUSTRATIVE EXAMPLE ONLY.
+apiVersion: gateway.gravitee.io/v1alpha1
+kind: ApiResource
+metadata:
+  name: shipment-tracking-api
+spec:
+  name: Shipment Tracking API
+  version: "1.0.0"
+  description: Provides shipment tracking information.
+  owner: logistics-team
+  policies:
+    - name: rate-limit
+      configuration:
+        limit: 100
+        period: 60
