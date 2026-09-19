@@ -1,0 +1,34 @@
+{
+  "name": "sambitc-copilot-marketplace",
+  "owner": {
+    "name": "sambitc"
+  },
+  "metadata": {
+    "description": "Copilot plugins for API governance and developer productivity.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "api-governance",
+      "description": "Reviews Gravitee API definitions against API governance rules.",
+      "version": "1.0.0",
+      "source": ".",
+      "repository": "https://github.com/sambitc/api-governance-plugin",
+      "license": "MIT",
+      "keywords": [
+        "api",
+        "governance",
+        "gravitee",
+        "openapi",
+        "kubernetes",
+        "security"
+      ],
+      "skills": [
+        "skills"
+      ],
+      "agents": [
+        "com.github.copilot/agents"
+      ]
+    }
+  ]
+}
